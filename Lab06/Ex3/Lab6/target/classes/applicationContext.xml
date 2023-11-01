@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Define your beans here -->
+    <bean id="myPropertyProduct"
+        class="org.example.Product"
+        scope="prototype">
+        <property name="id" value="1" />
+        <property name="name" value="Iphone 14 Promax 1TB" />
+        <property name="price" value="30000000" />
+        <property name="description" value="Dynamic Island" />
+    </bean>
+
+    <bean id="myConstructorArgProduct"
+          class="org.example.Product"
+          scope="prototype">
+        <constructor-arg name="id" value="2"/>
+        <constructor-arg name="name" value="Apple Watch SE"/>
+        <constructor-arg name="price" value="10000000"/>
+        <constructor-arg name="description" value="2nd generation"/>
+    </bean>
+
+    <bean id="mySingletonProduct"
+          class="org.example.Product"
+          scope="singleton">
+        <constructor-arg name="id" value="3"/>
+        <constructor-arg name="name" value="Mac Studio"/>
+        <constructor-arg name="price" value="50000000"/>
+        <constructor-arg name="description" value="1st generation"/>
+    </bean>
+</beans>
